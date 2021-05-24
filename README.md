@@ -56,7 +56,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![screenshot](https://user-images.githubusercontent.com/9848528/119367873-5e484e00-bced-11eb-87a1-7d4e0d56f19b.png)
+
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
