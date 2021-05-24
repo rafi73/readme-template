@@ -32,6 +32,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#project-structure">Project Structure</a></li>
       </ul>
     </li>
     <li>
@@ -59,6 +60,7 @@
 ![screenshot](https://user-images.githubusercontent.com/9848528/119367873-5e484e00-bced-11eb-87a1-7d4e0d56f19b.png)
 
 
+
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
 `github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
@@ -70,6 +72,69 @@ Here's a blank template to get started:
 * []()
 * []()
 
+
+### Project Structure
+
+```
+📦go-clean-arch
+ ┣ 📂app
+ ┃ ┗ 📜main.go
+ ┣ 📂article
+ ┃ ┣ 📂delivery
+ ┃ ┃ ┗ 📂http
+ ┃ ┃ ┃ ┣ 📂middleware
+ ┃ ┃ ┃ ┃ ┣ 📜middleware.go
+ ┃ ┃ ┃ ┃ ┗ 📜middleware_test.go
+ ┃ ┃ ┃ ┣ 📜article_handler.go
+ ┃ ┃ ┃ ┗ 📜article_test.go
+ ┃ ┣ 📂repository
+ ┃ ┃ ┣ 📂mysql
+ ┃ ┃ ┃ ┣ 📜mysqlarticle_test.go
+ ┃ ┃ ┃ ┗ 📜mysql_article.go
+ ┃ ┃ ┗ 📜helper.go
+ ┃ ┗ 📂usecase
+ ┃ ┃ ┣ 📜article_ucase.go
+ ┃ ┃ ┗ 📜article_ucase_test.go
+ ┣ 📂author
+ ┃ ┗ 📂repository
+ ┃ ┃ ┗ 📂mysql
+ ┃ ┃ ┃ ┣ 📜mysql_repository.go
+ ┃ ┃ ┃ ┗ 📜mysql_test.go
+ ┣ 📂domain
+ ┃ ┣ 📂mocks
+ ┃ ┃ ┣ 📜ArticleRepository.go
+ ┃ ┃ ┣ 📜ArticleUsecase.go
+ ┃ ┃ ┗ 📜AuthorRepository.go
+ ┃ ┣ 📜article.go
+ ┃ ┣ 📜author.go
+ ┃ ┗ 📜errors.go
+ ┣ 📂user
+ ┃ ┣ 📂delivery
+ ┃ ┃ ┗ 📂http
+ ┃ ┃ ┃ ┣ 📂middleware
+ ┃ ┃ ┃ ┃ ┣ 📜middleware.go
+ ┃ ┃ ┃ ┃ ┗ 📜middleware_test.go
+ ┃ ┃ ┃ ┣ 📜article_test.go
+ ┃ ┃ ┃ ┗ 📜user_handler.go
+ ┃ ┣ 📂repository
+ ┃ ┃ ┣ 📂mysql
+ ┃ ┃ ┃ ┣ 📜mysqlarticle_test.go
+ ┃ ┃ ┃ ┗ 📜mysql_article.go
+ ┃ ┃ ┗ 📜helper.go
+ ┃ ┗ 📂usecase
+ ┃ ┃ ┣ 📜article_ucase.go
+ ┃ ┃ ┗ 📜article_ucase_test.go
+ ┣ 📜article.sql
+ ┣ 📜clean-arch.png
+ ┣ 📜config.json
+ ┣ 📜docker-compose.yaml
+ ┣ 📜Dockerfile
+ ┣ 📜go.mod
+ ┣ 📜go.sum
+ ┣ 📜LICENSE
+ ┣ 📜Makefile
+ ┗ 📜README.md
+ ```
 
 
 <!-- GETTING STARTED -->
