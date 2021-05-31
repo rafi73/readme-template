@@ -167,6 +167,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
+Roadmaps useful for planning large pieces of work several months in advance at the Epic level within a single project. Simple planning and dependency management features help teams visualize and manage work better together. 
+
+
 See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
 
