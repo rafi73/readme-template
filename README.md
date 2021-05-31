@@ -17,8 +17,6 @@
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </p>
 
@@ -31,7 +29,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
         <li><a href="#project-structure">Project Structure</a></li>
       </ul>
     </li>
@@ -47,7 +44,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -57,20 +53,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![screenshot](https://user-images.githubusercontent.com/9848528/119367873-5e484e00-bced-11eb-87a1-7d4e0d56f19b.png)
+An architectural diagram is a diagram of a system that is used to abstract the overall outline of the software system and the relationships, constraints, and boundaries between components. It is an important tool as it provides an overall view of the physical deployment of the software system and its evolution roadmap
 
+**A diagram of the proposed system architecture for the Content Persistence Project is presented**
 
+![screenshot](https://upload.wikimedia.org/wikipedia/commons/f/f2/Content_persistence.system_architecture.diagram.svg)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
-### Built With
-
-* []()
-* []()
-* []()
 
 
 ### Project Structure
@@ -79,61 +67,22 @@ Here's a blank template to get started:
 📦go-clean-arch
  ┣ 📂app
  ┃ ┗ 📜main.go
+ ┣ 📂domain
+ ┃ ┣ 📂mocks
  ┣ 📂article
  ┃ ┣ 📂delivery
  ┃ ┃ ┗ 📂http
- ┃ ┃ ┃ ┣ 📂middleware
- ┃ ┃ ┃ ┃ ┣ 📜middleware.go
- ┃ ┃ ┃ ┃ ┗ 📜middleware_test.go
- ┃ ┃ ┃ ┣ 📜article_handler.go
- ┃ ┃ ┃ ┗ 📜article_test.go
+ ┃ ┃ ┃ ┗ 📂middleware
  ┃ ┣ 📂repository
- ┃ ┃ ┣ 📂mysql
- ┃ ┃ ┃ ┣ 📜mysqlarticle_test.go
- ┃ ┃ ┃ ┗ 📜mysql_article.go
- ┃ ┃ ┗ 📜helper.go
  ┃ ┗ 📂usecase
- ┃ ┃ ┣ 📜article_ucase.go
- ┃ ┃ ┗ 📜article_ucase_test.go
  ┣ 📂author
  ┃ ┗ 📂repository
- ┃ ┃ ┗ 📂mysql
- ┃ ┃ ┃ ┣ 📜mysql_repository.go
- ┃ ┃ ┃ ┗ 📜mysql_test.go
- ┣ 📂domain
- ┃ ┣ 📂mocks
- ┃ ┃ ┣ 📜ArticleRepository.go
- ┃ ┃ ┣ 📜ArticleUsecase.go
- ┃ ┃ ┗ 📜AuthorRepository.go
- ┃ ┣ 📜article.go
- ┃ ┣ 📜author.go
- ┃ ┗ 📜errors.go
  ┣ 📂user
  ┃ ┣ 📂delivery
  ┃ ┃ ┗ 📂http
  ┃ ┃ ┃ ┣ 📂middleware
- ┃ ┃ ┃ ┃ ┣ 📜middleware.go
- ┃ ┃ ┃ ┃ ┗ 📜middleware_test.go
- ┃ ┃ ┃ ┣ 📜article_test.go
- ┃ ┃ ┃ ┗ 📜user_handler.go
  ┃ ┣ 📂repository
- ┃ ┃ ┣ 📂mysql
- ┃ ┃ ┃ ┣ 📜mysqlarticle_test.go
- ┃ ┃ ┃ ┗ 📜mysql_article.go
- ┃ ┃ ┗ 📜helper.go
  ┃ ┗ 📂usecase
- ┃ ┃ ┣ 📜article_ucase.go
- ┃ ┃ ┗ 📜article_ucase_test.go
- ┣ 📜article.sql
- ┣ 📜clean-arch.png
- ┣ 📜config.json
- ┣ 📜docker-compose.yaml
- ┣ 📜Dockerfile
- ┣ 📜go.mod
- ┣ 📜go.sum
- ┣ 📜LICENSE
- ┣ 📜Makefile
- ┗ 📜README.md
  ```
 
 
@@ -144,10 +93,32 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+This is an example of how to list things you need to use the software and how to install them on MacOS using Homebrew.
+
+* Homebrew
   ```sh
-  npm install npm@latest -g
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" brew doctor
+  ```
+
+* Git
+  ```sh
+  brew install git
+  ```
+* GO
+  ```sh
+  brew install go
+  ```
+* PostgreSQL
+  ```sh
+  brew install postgresql
+  ```
+* Make 
+  ```sh
+  brew install make
+  ```
+* Docker
+  ```sh
+  brew cask install docker
   ```
 
 ### Installation
@@ -158,7 +129,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   make all
    ```
 
 
@@ -200,25 +171,13 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [Gin](https://gin-gonic.com)
+* [Gorm](https://gorm.io)
+* [Docker](https://www.docker.com)
+* [PostgreSQL](https://www.postgresql.org)
 
 
 
